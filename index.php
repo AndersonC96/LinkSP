@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simple Pharma - Upload de Arquivo</title>
+        <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/5ede7b_719545c97a084f288b8566db52756425%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/5ede7b_719545c97a084f288b8566db52756425%7Emv2.png"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
             .container{
@@ -48,6 +49,18 @@
                 <button type="submit" class="btn btn-success">Enviar</button>
             </form>
         </div>
+        <script>
+            function showSuccessPopup(){
+                alert("Arquivo adicionado com sucesso");
+            }
+            window.onload = function(){
+                const urlParams = new URLSearchParams(window.location.search);
+                const success = urlParams.get('success');
+                if(success === 'true'){
+                    showSuccessPopup();
+                }
+            };
+        </script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
