@@ -10,7 +10,7 @@
             $file_path = $target_file;
             $sql = "INSERT INTO files (file_name, file_path) VALUES ('$file_name', '$file_path')";
             if ($conn->query($sql) === TRUE){
-                header("Location: ./index.php?success=true");
+                header("Location: ../index.php?success=true");
                 exit();
             }else{
                 echo "Erro ao enviar o arquivo: " . $conn->error;
